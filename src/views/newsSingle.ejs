@@ -11,22 +11,15 @@
 <body>
     <header class="header">
         <div class="header__logo">Node.Js News</div>
-        <%- include('./partials/search.ejs') %>
+        <div class="header__search">Search</div>
     </header>
 
     <div class="wraper">
         <div class="news">
-            <% if(articles != null){ %>
-            <% articles.forEach(function(article, index){ %>
-                <a href= "/article/<%- article.id%>" class="news__card">
-                    <img src="<%- article.thumbnail_url%>" alt="<%- article.title.rendered%>">
-                    <h2><%- article.title.rendered %></h2>
-                    <p><%- article.excerpt.rendered %></p>
-                </a>       
-            <% })%>
-            <% }else{%>
-                No posts found.
-            <% } %>
+            <a href ="/">&larr; - Back</a>
+            <h2><%- article.title.rendered %></h2>
+            <p><%- article.excerpt.rendered %></p>
+
         </div>
     </div>
 
